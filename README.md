@@ -1,50 +1,70 @@
-# Final-Project
+# Turkish Sentiment Analysis Project
 
-## Sentiment Analysis
+Bu proje, YouTube yorumları üzerinde duygu analizi yapmayı amaçlamaktadır. Projede, farklı kelime temsil modelleri kullanılarak bir metnin duygusal tonunun belirlenmesi için makine öğrenmesi modelleri geliştirilmektedir.
 
-## Yapılacaklar
-### - YouTube API ile yorumları çekme
+## Projeyi Çalıştırma
 
-### Anlamlı Kelimelerin Çıkarılması:
+Proje üzerinde çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
-**1. Metin Temizleme:**
-Gereksiz karakterleri ve noktalama işaretlerini kaldırın.
-Büyük-küçük harf dönüşümü yapın.
+Python 3.11.3 versiyonu kullanılmıştır.
 
-**2. Stop Words:**
-Türkçe'de yaygın olarak kullanılan "stop words" adı verilen, anlam taşımayan kelimeleri çıkarın. (NLTK)
+1. Gerekli kütüphaneleri yükleyin:
 
-**3. Tokenization:**
-Metni kelimelere ayırın.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-**4. Kök Çıkarma (Stemming) veya Lematizasyon:**
-Kelimelerin köklerini çıkarmak veya lematize etmek, benzer anlamlı kelimeleri birleştirmenize yardımcı olabilir.
+2. YouTube API ile yorumları çekme methodlarını uygulamak için:
 
-### - Sentiment Analizi yapmak için önceden eğitilmiş bir model
+    ```bash
+    pip install google-api-python-client
+    ```
 
-Sentiment analizi için önceden eğitilmiş bir model kullanabilirsiniz. Bu modeller, genellikle pozitif, negatif veya nötr olarak duygu durumunu tahmin eder. (Henüz modele karar verilmedi) (huggingface vb.)
+    ve YOUTUBE_API Key e sahip olmanız gerekir. YOUTUBE_API Key almak için blog yazımı okuyabilirsiniz.
+    [YOUTUBE_API Key](https://medium.com/@seherkumsar/veri-biliminde-api-kullan%C4%B1m%C4%B1-7b21aa28f3d9) edinin.
 
-### Duygu Durumu Analizi:
+## Proje Dosya Yapısı
+
+- **data/**: Veri seti dosyaları
+- **models/**: Eğitilen modeller
+- **src/**: Python kaynak kodları
+- **config.py**: Proje ayarları
+- **requirements.txt**: Gerekli kütüphanelerin listesi
+- **README.md**: Proje açıklaması
+
+### Kullanım Talimatları:
 
 **1. Veri Seti Hazırlığı:**
-Temizlenmiş ve işlenmiş yorumları içeren veri setinizi kullanarak, eğitim ve test veri setlerinizi oluşturun.
+Veri setini toplayın ve temizleyin. CSV formatında bir dosya kullanılabilir.
 
-**2. Makine Öğrenmesi Modeli Seçimi:**
-Projenize uygun bir makine öğrenmesi modeli seçin. Bu duygu analizi için sıkça kullanılan modeller arasında Destek Vektör Makineleri (SVM), Naive Bayes modeller kullanılabilir.
+**2. Kelime Temsil Modelleri Eğitimi:**
+Count Vectors, TF-IDF Vectors, Word2Vec, FastText gibi kelime temsil modelleri eğitildi.
 
-**3. Model Eğitimi:**
-Seçtiğiniz modeli eğitmek için veri setinizi kullanın. Eğitim süreci, metin verileri üzerinde duygu durumunu tahmin etmek için modelinizi öğrenmesini içerir.
+**3. Makine Öğrenmesi Modelleri:**
+Eğitilen kelime temsil modelleri kullanılarak makine öğrenmesi modelleri (örneğin, Naive Bayes, SVM, Random Forest) eğitildi. Eğitim süreci, metin verileri üzerinde duygu durumunu tahmin etmek için model öğrenmesini içerir.
 
-**4. Model Doğrulama:**
-Eğitim veri setini kullanarak eğitilen modelinizi test veri seti üzerinde doğrulayın. Modelinizin performansını değerlendirin ve gerekirse hiperparametreleri ayarlayarak iyileştirme yapın.
+**4. Sonuçların Değerlendirilmesi:**
+Eğitim veri seti kullanılarak eğitilen model test veriseti test edilir. Modelin performansı, doğruluk skoru ve sınıflandırma raporu kullanılarak değerlendirilir.
 
-**5. Duygu Analizi Uygulaması:**
-Eğitilen modelinizi kullanarak YouTube API ile çektiğiniz yorumları analiz edin. Her yorumun pozitif, negatif veya nötr bir duygu durumu içerip içermediğini belirleyin.
+**5. YouTube Duygu Analizi:**
+YouTube API kullanılarak veri toplanır ve toplanan veriler kullanılarak her yorumun olumlu, olumsuz veya tarafsız bir duygu durumu içerip içermediğini belirleyen bir duygu analizi yapılır. Duygu analizi sonuçları, veri setindeki yorumlara eklenir.
 
-**6. Sonuçları Görselleştirme:**
-Duygu analizi sonuçlarını kullanıcı dostu bir şekilde görselleştirin. Grafikler veya raporlar kullanarak projenizin kullanıcılarına anlamlı bilgiler sunun.
+**6. Sonuçların Görselleştirilmesi:**
+Duygu analizi sonuçlarını grafiklerle görselleştirilir.
 
+## Kullanılan Teknolojiler
 
-pip install requirements.txt
-- pip install pandas
-- pip install google-api-python-client
+- Python 3.x
+- scikit-learn
+- pandas
+- numpy
+- transformers
+- textblob
+- matplotlib
+- seaborn
+- gensim
+- wordcloud
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
