@@ -1,0 +1,9 @@
+scikit-learn
+pandas
+numpy
+transformers
+textblob
+matplotli
+seaborn
+gensim
+wordcloud

@@ -1,0 +1,11 @@
+.conda
+.env
+.vscode
+
+# modelleri ignore et
+*.h5
+*.hdf5
+
+# configurations
+config.py
+__pycache__
