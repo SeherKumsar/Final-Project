@@ -2,9 +2,11 @@
 .env
 .vscode
 
-# modelleri ignore et
-*.h5
-*.hdf5
+# modeller
+*.bin
+*.npy
+*.pkl
+
 
 # configurations
 config.py
