@@ -21,7 +21,7 @@ Python 3.11.3 versiyonu kullanılmıştır.
     ```
 
     ve YOUTUBE_API Key e sahip olmanız gerekir. YOUTUBE_API Key almak için blog yazımı okuyabilirsiniz.
-    [YOUTUBE_API Key](https://medium.com/@seherkumsar/veri-biliminde-api-kullan%C4%B1m%C4%B1-7b21aa28f3d9) edinin.
+    [YOUTUBE_API Key](https://medium.com/@seherkumsar/veri-biliminde-api-kullan%C4%B1m%C4%B1-7b21aa28f3d9)
 
 ## Proje Dosya Yapısı
 
@@ -49,8 +49,12 @@ Eğitim veri seti kullanılarak eğitilen model test veriseti test edilir. Model
 **5. YouTube Duygu Analizi:**
 YouTube API kullanılarak veri toplanır ve toplanan veriler kullanılarak her yorumun olumlu, olumsuz veya tarafsız bir duygu durumu içerip içermediğini belirleyen bir duygu analizi yapılır. Duygu analizi sonuçları, veri setindeki yorumlara eklenir.
 
+![Alt text](image.png)
+
 **6. Sonuçların Görselleştirilmesi:**
 Duygu analizi sonuçlarını grafiklerle görselleştirilir.
+
+![Alt text](image-1.png)
 
 ## Kullanılan Teknolojiler
 
