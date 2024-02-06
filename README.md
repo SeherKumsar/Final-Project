@@ -1,10 +1,10 @@
 # Turkish Sentiment Analysis Project
 
-Bu proje, YouTube yorumları üzerinde duygu analizi yapmayı amaçlamaktadır. Projede, farklı kelime temsil modelleri kullanılarak bir metnin duygusal tonunun belirlenmesi için makine öğrenmesi modelleri geliştirilmektedir.
+Bu proje, YouTube yorumları üzerinde duygu analizi yapmayı amaçlamaktadır. Projede, farklı kelime temsil modelleri kullanılarak bir metnin duygusal tonunun belirlenmesi için makine öğrenmesi modelleri geliştirilmiştir.
 
 ## Projeyi Çalıştırma
 
-Proje üzerinde çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 
 Python 3.11.3 versiyonu kullanılmıştır.
 
@@ -20,19 +20,16 @@ Python 3.11.3 versiyonu kullanılmıştır.
     pip install google-api-python-client
     ```
 
-    ve YOUTUBE_API Key e sahip olmanız gerekir. YOUTUBE_API Key almak için blog yazımı okuyabilirsiniz.
-    [YOUTUBE_API Key](https://medium.com/@seherkumsar/veri-biliminde-api-kullan%C4%B1m%C4%B1-7b21aa28f3d9)
+    ve YOUTUBE_API Key e sahip olmanız gerekir. [YOUTUBE_API Key](https://medium.com/@seherkumsar/veri-biliminde-api-kullan%C4%B1m%C4%B1-7b21aa28f3d9) Key almak için blog yazımı okuyabilirsiniz 😊
 
-## Proje Dosya Yapısı
+## Proje Dosyaları
 
-- **data/**: Veri seti dosyaları
-- **models/**: Eğitilen modeller
-- **src/**: Python kaynak kodları
-- **config.py**: Proje ayarları
-- **requirements.txt**: Gerekli kütüphanelerin listesi
-- **README.md**: Proje açıklaması
+- **[data](data/)**: Veri setleri
+- **[api_methods.py](api_methods.py)**: Youtube API için metodlar
+- **[config.py](config.py)**: Youtube API Key bilgisi
+- **[requirements.txt](requirements.txt)**: Gerekli kütüphaneler
 
-### Kullanım Talimatları:
+## Proje Aşamaları:
 
 **1. Veri Seti Hazırlığı:**
 Veri setini toplayın ve temizleyin. CSV formatında bir dosya kullanılabilir.
@@ -46,7 +43,7 @@ Eğitilen kelime temsil modelleri kullanılarak makine öğrenmesi modelleri (ö
 **4. Sonuçların Değerlendirilmesi:**
 Eğitim veri seti kullanılarak eğitilen model test veriseti test edilir. Modelin performansı, doğruluk skoru ve sınıflandırma raporu kullanılarak değerlendirilir.
 
-**5. YouTube Duygu Analizi:**
+**5. YouTube Yorumlarının Duygu Analizi:**
 YouTube API kullanılarak veri toplanır ve toplanan veriler kullanılarak her yorumun olumlu, olumsuz veya tarafsız bir duygu durumu içerip içermediğini belirleyen bir duygu analizi yapılır. Duygu analizi sonuçları, veri setindeki yorumlara eklenir.
 
 ![Alt text](image.png)
@@ -56,9 +53,8 @@ Duygu analizi sonuçlarını grafiklerle görselleştirilir.
 
 ![Alt text](image-1.png)
 
-## Kullanılan Teknolojiler
+## Kullanılan Kütüphaneler
 
-- Python 3.x
 - scikit-learn
 - pandas
 - numpy
